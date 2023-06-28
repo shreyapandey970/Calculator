@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+
+<style>
+h1{text-align:center; font-family:fantasy; color:#E00EFF; font-size:50px;}
+body{background-color:black;}
+#cal{height:30px; width:300px; margin-left:520px; border-radius:10px;}
+#in{height:50px; width:60px; margin-right:20px; background-color:#E00EFF; border:none; border-radius:10px; color:white; font-size:20px;}
+#buttons{margin-left:520px;}
+#cl{height:50px; width:145px; margin-right:20px; background-color:#E00EFF; border:none; border-radius:10px; color:white; font-size:20px;}
+
+</style>
+
+<script language="javascript">
+function calculator(val)
+{
+  document.getElementById("cal").value+=val
+}
+function solve()
+{
+  x=document.getElementById("cal").value;
+  y=eval(x);
+  document.getElementById("cal").value=y;  //displaying it in the same input field -> storing value of y in cal
+}
+</script>
+</head>
+
+
+<body>
+<form method="get">
+<h1>C A L C U L A T O R</h1><br>
+
+<input type="text" id="cal">
+<br></br>
+
+<p id="buttons">
+<input type="button" value="7" onclick="calculator('7')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="8" onclick="calculator('8')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="9" onclick="calculator('9')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="/" onclick="calculator('/')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+
+<br><br>
+
+
+<input type="button" value="4" onclick="calculator('4')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="5" onclick="calculator('5')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="6" onclick="calculator('6')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="*" onclick="calculator('*')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+
+<br><br>
+
+
+<input type="button" value="1" onclick="calculator('1')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="2" onclick="calculator('2')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="3" onclick="calculator('3')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="button" value="+" onclick="calculator('+')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+
+<br><br>
+<input type="button" value="-" onclick="calculator('-')" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+
+<input type="button" value="=" onclick="solve()" id="in" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+<input type="reset" value="CLEAR" id="cl" onmousedown="this.style.background='#9B009C'" onmouseup="this.style.background='#E00EFF'">
+
+
+</p>
+
+</body>
+</html>
